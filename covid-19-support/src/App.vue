@@ -32,6 +32,11 @@
                         {{$t('sidebar.when-do-you-need-it')}}
                         <b-form-select v-model="userday" :options="dayOptions"></b-form-select>
                     </div>
+                </div>
+                <div class="resultList">
+                    <ul>
+                        <li v-for="(item,index) in filteredMarkers" v-bind:key="index">{{item.gsx$providername.$t}}</li>
+                    </ul>
 
                 </div>
             </div>
